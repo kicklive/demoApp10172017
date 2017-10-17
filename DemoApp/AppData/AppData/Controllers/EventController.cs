@@ -13,6 +13,13 @@ namespace AppData.Controllers
     {
         public JToken Get(string id = null)
         {
+            if(id==null)
+                return GetAllJsonEventsAsArray();
+            return GetSingleJsonFile(id);
+        }
+
+        private static JToken GetSingleJsonFile(string id)
+        {
             var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
             return JObject.Parse(System.IO.File.ReadAllText(path + "../app/data/event/" + id + ".json"));
             //return JObject.Parse(System.IO.File.ReadAllText(path + "../app/data/event/2.json"));
@@ -23,6 +30,17 @@ namespace AppData.Controllers
             var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
             System.IO.File.WriteAllText(path + "../app/data/event/" + id + ".json", eventData.ToString(Formatting.None));
             //System.IO.File.WriteAllText(path + "../app/data/event/3.json", eventData.ToString(Formatting.None));
+        }
+
+        public JArray GetAllJsonEventsAsArray()
+        {
+            var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
+            var contents = string.Empty;
+            foreach (var file in System.IO.Directory.GetFiles(path + "../app/data/event"))
+            {
+                contents += System.IO.File.ReadAllText(file);
+            }
+            return JArray.Parse("["+contents.Substring(0,contents.Length-1)+"]");
         }
     }
 }

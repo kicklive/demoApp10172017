@@ -22,6 +22,9 @@ eventsApp.factory('eventData', function($resource) {
         save: function(event) {
             event.id = 998;
             return resource.save(event);
+        },
+        getAllEvents: function() {
+            return resource.query();
         }
     }
 });
