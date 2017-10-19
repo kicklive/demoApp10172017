@@ -148,6 +148,5 @@ C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\bin\Mi
 C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\bin\System.Web.Http.Owin.xml
-C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\obj\Debug\AppData.csprojResolveAssemblyReference.cache
 C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\obj\Debug\AppData.dll
 C:\Users\paytoda\Documents\GitHub\demoApp10172017\DemoApp\AppData\AppData\obj\Debug\AppData.pdb
